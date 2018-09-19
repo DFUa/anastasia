@@ -468,7 +468,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     max-width: 40%;
-    .action-item-desc:after{
+    .action-item-desc:after {
       margin-right: auto;
       margin-left: inherit;
     }
@@ -505,6 +505,44 @@ header {
         color: $hover-black;
       }
     }
+  }
+}
+
+.search-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .8);
+  padding: 15px;
+  display: none;
+  h2{
+    color: white;
+    margin-bottom: 15px;
+  }
+  input{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  .cancel{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  &.show{
+    display: block;
   }
 }
 

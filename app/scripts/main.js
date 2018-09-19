@@ -89,4 +89,15 @@ $(document).ready(function() {
     }
   });
 
+  $('.search').on('click',function (event) {
+  	event.preventDefault();
+  	$('.search-block').addClass('show');
+  	$('.search-block').find('input').focus();
+  });
+
+  $('.cancel').on('click',function () {
+  	$('.search-block').removeClass('show');
+  	$('.search-block').find('input').val('')
+  })
+
 });
