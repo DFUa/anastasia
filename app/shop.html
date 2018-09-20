@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>anastasia</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;!important">
+    <symbol id="facebook" viewBox="-110 1 511 511.99996">
+      <title>facebook</title>
+      <path d="m180 512h-81.992188c-13.695312 0-24.835937-11.140625-24.835937-24.835938v-184.9375h-47.835937c-13.695313 0-24.835938-11.144531-24.835938-24.835937v-79.246094c0-13.695312 11.140625-24.835937 24.835938-24.835937h47.835937v-39.683594c0-39.347656 12.355469-72.824219 35.726563-96.804688 23.476562-24.089843 56.285156-36.820312 94.878906-36.820312l62.53125.101562c13.671875.023438 24.792968 11.164063 24.792968 24.835938v73.578125c0 13.695313-11.136718 24.835937-24.828124 24.835937l-42.101563.015626c-12.839844 0-16.109375 2.574218-16.808594 3.363281-1.152343 1.308593-2.523437 5.007812-2.523437 15.222656v31.351563h58.269531c4.386719 0 8.636719 1.082031 12.289063 3.121093 7.878906 4.402344 12.777343 12.726563 12.777343 21.722657l-.03125 79.246093c0 13.6875-11.140625 24.828125-24.835937 24.828125h-58.46875v184.941406c0 13.695313-11.144532 24.835938-24.839844 24.835938zm-76.8125-30.015625h71.632812v-193.195313c0-9.144531 7.441407-16.582031 16.582032-16.582031h66.726562l.027344-68.882812h-66.757812c-9.140626 0-16.578126-7.4375-16.578126-16.582031v-44.789063c0-11.726563 1.191407-25.0625 10.042969-35.085937 10.695313-12.117188 27.550781-13.515626 39.300781-13.515626l36.921876-.015624v-63.226563l-57.332032-.09375c-62.023437 0-100.566406 39.703125-100.566406 103.609375v53.117188c0 9.140624-7.4375 16.582031-16.578125 16.582031h-56.09375v68.882812h56.09375c9.140625 0 16.578125 7.4375 16.578125 16.582031zm163.0625-451.867187h.003906zm0 0" />
+    </symbol>
+    <symbol id="instagram-logo" viewBox="0 0 169.063 169.063">
+      <title>instagram-logo</title>
+      <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752 c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407 c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752 c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
+      <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561 C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561 c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z" />
+      <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78 c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78 C135.661,29.421,132.821,28.251,129.921,28.251z" />
+    </symbol>
+    <symbol id="chevron" viewBox="0 0 512 512">
+      <title>chevron</title>
+      <path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0 c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878 l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z" />
+    </symbol>
+    <symbol id="vertical-dots" viewBox="0 0 45.583 45.583">
+      <title>vertical-dots</title>
+      <path d="M22.793,12.196c-3.361,0-6.078-2.729-6.078-6.099C16.715,2.73,19.432,0,22.793,0c3.353,0,6.073,2.729,6.073,6.097 C28.866,9.466,26.145,12.196,22.793,12.196z" />
+      <path d="M22.794,28.889c-3.361,0-6.079-2.729-6.079-6.099c0-3.366,2.717-6.099,6.078-6.099c3.353,0,6.073,2.732,6.075,6.099 C28.866,26.162,26.144,28.889,22.794,28.889z" />
+      <path d="M22.794,45.583c-3.361,0-6.079-2.729-6.079-6.099s2.717-6.098,6.078-6.098c3.353-0.002,6.073,2.729,6.073,6.098 S26.144,45.583,22.794,45.583z" />
+    </symbol>
+    <symbol id="cancel" viewBox="0 0 64 64">
+      <title>cancel</title>
+      <path d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z" />
+    </symbol>
+  </svg>
+  <header>
+    <div class="container d-flex align-items-center">
+      <a class="navbar-brand" href="#">
+        logo
+      </a>
+      <ul class="main-menu d-flex ">
+        <li class="main-menu-item">
+          <a class="main-menu-link" href="#">про нас</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#">Контакти</a>
+            </li>
+            <li>
+              <a href="#">Графік роботи</a>
+            </li>
+            <li>
+              <a href="#">Орендарям</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-menu-item">
+          <a class="main-menu-link" href="#">новини</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#" class="">Події</a>
+            </li>
+            <li>
+              <a href="#" class="">Акції</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-menu-item">
+          <a class="main-menu-link" href="#">Магазини</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#">Аксесуари для мобільних телефонів</a>
+            </li>
+            <li>
+              <a href="#">Білизна</a>
+            </li>
+            <li>
+              <a href="#">Взуття, сумки</a>
+            </li>
+            <li>
+              <a href="#">Галантерея та аксесуари</a>
+            </li>
+            <li>
+              <a href="#">Годинники та біжутерія</a>
+            </li>
+            <li>
+              <a href="#">Жіночий та чоловічий одяг</a>
+            </li>
+            <li>
+              <a href="#">Краса і здоров'я</a>
+            </li>
+            <li>
+              <a href="#">Подарунки, ігри, сувеніри</a>
+            </li>
+            <li>
+              <a href="#">Продукти харчування, Тютюнові вироби</a>
+            </li>
+            <li>
+              <a href="#">Техніка, Електроніка, Зв'язок, Книги</a>
+            </li>
+            <li>
+              <a href="#">Товари для дітей</a>
+            </li>
+            <li>
+              <a href="#">Товари для дому</a>
+            </li>
+            <li>
+              <a href="#">Товари та одяг для активного відпочинку</a>
+            </li>
+            <li>
+              <a href="#">Ювелірні вироби</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-menu-item">
+          <a class="main-menu-link" href="#">Розваги</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#">Активний відпочинок</a>
+            </li>
+            <li>
+              <a href="#">Атракціони</a>
+            </li>
+            <li>
+              <a href="#">Для дітей</a>
+            </li>
+            <li>
+              <a href="#">Для дорослих</a>
+            </li>
+            <li>
+              <a href="#">Кінотеатри</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-menu-item">
+          <a class="main-menu-link" href="#">Ресторація</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#">Кафе</a>
+            </li>
+            <li>
+              <a href="#">Ресторани</a>
+            </li>
+            <li>
+              <a href="#">Снеки і солодощі</a>
+            </li>
+            <li>
+              <a href="#">Фуд-корт</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-menu-item">
+          <a class="main-menu-link" href="#">Послуги</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#">Банківські послуги</a>
+            </li>
+            <li>
+              <a href="#">Краса і здоров'я</a>
+            </li>
+            <li>
+              <a href="#">Навчання</a>
+            </li>
+            <li>
+              <a href="#">Побутові послуги</a>
+            </li>
+            <li>
+              <a href="#">Продаж квитків</a>
+            </li>
+            <li>
+              <a href="#">Туристичні послуги</a>
+            </li>
+            <li>
+              <a href="#">Упаковка подарунків</a>
+            </li>
+            <li>
+              <a href="#">фото послуги</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="lang-block">
+        <span href="#" class="lang-curr">ukr
+          <svg fill="grey">
+            <use xlink:href="#chevron" />
+          </svg>
+        </span>
+        <ul>
+          <li>
+            <a href="#">rus</a>
+          </li>
+          <li>
+            <a href="#">eng</a>
+          </li>
+        </ul>
+      </div>
+      <div class="add-panel">
+        <svg fill="white">
+          <use xlink:href="#vertical-dots" />
+        </svg>
+        <ul>
+          <li><a class="search" href="#">Пошук</a></li>
+          <li><a href="#">Карта ТРЦ</a></li>
+          <li><a href="#">Графік роботи</a></li>
+          <li><a href="#">Карта проїзду</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="search-block">
+    <svg class="cancel" fill="white">
+      <use xlink:href="#cancel" />
+    </svg>
+    <h2>Пошук</h2>
+    <input type="text" placeholder="введіть назву">
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb container">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </nav>
+  <section class="shop-list">
+    <div class="container">
+      <h2 class="section-header">Магазини</h2>
+      <div class="shop-filter">
+        <div class="filter-item">
+          <span class="filter-name">Категорія:</span>
+          <div class="input-group">
+            <select class="custom-select" id="category">
+              <option selected>Всі</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="shop-list-result">
+        <div class="shop-list-result-item">
+          <div class="shop-list-result-labels">
+            <span class="shop-list-result-country">Ukraine</span>
+          </div>
+          <div class="shop-list-item-logo">
+            <img src="https://fakeimg.pl/250x200/?text=250x200" alt="#">
+          </div>
+          <p class="shop-list-item-name">Brush me</p>
+          <a class="primary-link" href="#">Детальніше</a>
+        </div>
+        <div class="shop-list-result-item">
+          <div class="shop-list-result-labels">
+            <span class="shop-list-result-country">Ukraine</span>
+          </div>
+          <div class="shop-list-item-logo">
+            <img src="https://fakeimg.pl/200x250/?text=200x250" alt="#">
+          </div>
+          <p class="shop-list-item-name">Brush me Brush me Brush me Brush me</p>
+          <a class="primary-link" href="#">Детальніше</a>
+        </div>
+        <div class="shop-list-result-item">
+          <div class="shop-list-result-labels">
+            <span class="shop-list-result-country">Ukraine</span>
+            <span class="shop-list-result-country">Canada</span>
+          </div>
+          <div class="shop-list-item-logo">
+            <img src="https://fakeimg.pl/260x180/?text=260x180" alt="#">
+          </div>
+          <p class="shop-list-item-name">Електронні сигарети Royal Viper</p>
+          <a class="primary-link" href="#">Детальніше</a>
+        </div>
+        <div class="shop-list-result-item">
+          <div class="shop-list-result-labels">
+            <span class="shop-list-result-country">Ukraine</span>
+          </div>
+          <div class="shop-list-item-logo">
+            <img src="https://fakeimg.pl/300x90/?text=300x90" alt="#">
+          </div>
+          <p class="shop-list-item-name">Електронні сигарети Royal Viper</p>
+          <a class="primary-link" href="#">Детальніше</a>
+        </div>
+        <div class="shop-list-result-item">
+          <div class="shop-list-result-labels">
+            <span class="shop-list-result-country">Ukraine</span>
+          </div>
+          <div class="shop-list-item-logo">
+            <img src="https://fakeimg.pl/90x300/?text=90x300" alt="#">
+          </div>
+          <p class="shop-list-item-name">Електронні сигарети Royal Viper</p>
+          <a class="primary-link" href="#">Детальніше</a>
+        </div>
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link prev" href="#" aria-label="Previous">
+              <svg fill="#272727">
+                <use xlink:href="#chevron" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link next" href="#" aria-label="Next">
+              <svg fill="#272727">
+                <use xlink:href="#chevron"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="subscribe">
+    <div class="container">
+      <h4>Хочете підписатися на розсилку?</h4>
+      <form action="#">
+        <input type="email" placeholder="Введіть Ваш e-mail" required>
+        <button class="submit" type="submit">підписатися</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-wrap d-flex">
+        <ul class="footer-col">
+          <li><a href="#">Про нас</a></li>
+          <li><a class="sub" href="#">Контакти</a></li>
+          <li><a class="sub" href="#">Графік роботи</a></li>
+          <li><a class="sub" href="#">Орендарям</a></li>
+        </ul>
+        <ul class="footer-col">
+          <li><a href="#">Новини</a></li>
+          <li><a href="#">Події</a></li>
+          <li><a href="#">Акції</a></li>
+        </ul>
+        <ul class="footer-col">
+          <li><a href="#">Магазини</a></li>
+          <li><a href="#">Розваги</a></li>
+          <li><a href="#">Ресторація</a></li>
+          <li><a href="#">Послуги</a></li>
+        </ul>
+        <div class="footer-col">
+          <p class="footer-heading">Контакти</p>
+          <p class="address">1 частина - Київ, Оболонський просп., 1-б (метро Оболонь, Мінська)</p>
+          <p class="address">2 частина - Київ, Оболонський просп., 21-б (метро Мінська, Героїв Дніпра)</p>
+          <p class="tel">(044) 428-36-11</p>
+          <a class="show-map" href="#">Дивитися на карті</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/popper.js/dist/umd/popper.js"></script>
+  <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+  <script src="/bower_components/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/plugins.js -->
+  <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
