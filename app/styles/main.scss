@@ -130,6 +130,11 @@ body {
         }
       }
     }
+    &.disabled{
+      .page-link{
+        color: $red;
+      }
+    }
   }
 }
 
@@ -152,7 +157,6 @@ body {
 
 .section-header {
   font-size: 70px;
-  font-weight: 600;
   text-align: center;
   color: $black;
   margin-bottom: 70px;
@@ -164,6 +168,12 @@ body {
     height: 1px;
     background-color: lightgrey;
   }
+}
+
+.sub-header{
+  font-size: 30px;
+  color: $black;
+  font-weight: 500;
 }
 
 header {
@@ -197,7 +207,7 @@ header {
       }
     }
   }
-  .main-menu-link {
+  a {
     color: white;
     position: relative;
     text-transform: uppercase;
@@ -230,12 +240,16 @@ header {
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.15);
     li {
       a {
+        text-transform: inherit;
         display: block;
         padding: 12px;
         font-size: 13px;
         color: $black;
         transition: all .2s;
         font-weight: 600;
+        height: inherit;
+        min-width: inherit;
+        text-align: left;
         &:hover {
           text-decoration: none;
           background-color: rgba(0, 0, 0, 0.03);
@@ -745,6 +759,100 @@ footer {
         margin: 20px auto 0;
       }
     }
+  }
+}
+
+.shop-info{
+  width: 270px;
+  flex-shrink: 0;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  .shop-info-label{
+    display: inline-block;
+    background: $black;
+    font-size: 13px;
+    text-transform: none;
+    color: #FFF;
+    font-weight: 300;
+    padding: 5px 10px;
+  }
+  .shop-info-img{
+    margin-top: 10px;
+    box-shadow: 0 1px 15px rgba(0,0,0,0.15);
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    img{
+      display: block;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 120%;
+      max-height: 100%;
+    }
+  }
+  .primary-link{
+    display: block;
+    text-align: center;
+  }
+}
+
+.shop-info-list{
+  margin-bottom: 20px;
+  li{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 15px 0;
+    svg{
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    a,span{
+      font-weight: 300;
+      color: $black;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.shop-desc{
+  margin-bottom: 30px;
+  .shop-desc-text{
+    font-weight: 300;
+    p{
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.shop-desc-gallery{
+  display: flex;
+  margin: 0 -15px;
+  flex-wrap: wrap;
+  .shop-desc-gallery-item{
+    margin: 0 15px;
+    width: calc(33.33% - 30px);
+    overflow: hidden;
+    img{
+      display: block;
+    }
+  }
+}
+
+.leave-review{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .summ{
+    color: grey;
+    text-transform: uppercase;
+    font-weight: 300;
   }
 }
 
