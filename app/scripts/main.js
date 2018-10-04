@@ -28,14 +28,14 @@ $(document).ready(function() {
   });
 
   $('.main-banner').slick({
-    'rows': 0,
-    'dots': true,
-    'nextArrow': `<button type="button" class="slick-next">
+    rows: 0,
+    dots: true,
+    nextArrow: `<button type="button" class="slick-next">
   									<svg fill="black">
 											<use xlink:href="#chevron" />
 										</svg>
 									</button>`,
-    'prevArrow': `<button type="button" class="slick-prev">
+    prevArrow: `<button type="button" class="slick-prev">
   									<svg fill="black">
 											<use xlink:href="#chevron" />
 										</svg>
@@ -43,20 +43,40 @@ $(document).ready(function() {
   });
 
   $('.slider-news').slick({
-    'slidesToShow': 3,
-    'rows': 0,
-    'dots': true,
-    'nextArrow': `<button type="button" class="slick-next">
+    slidesToShow: 3,
+    rows: 0,
+    dots: true,
+    nextArrow: `<button type="button" class="slick-next">
   									<svg fill="black">
 											<use xlink:href="#chevron" />
 										</svg>
 									</button>`,
-    'prevArrow': `<button type="button" class="slick-prev">
+    prevArrow: `<button type="button" class="slick-prev">
   									<svg fill="black">
 											<use xlink:href="#chevron" />
 										</svg>
 									</button>`
-  })
+  });
+
+  $('.banner-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    speed: 800,
+    dots: true,
+    // autoplay: true,
+    lazyLoad: 'ondemand',
+    cssEase: 'cubic-bezier(0.845, 0.045, 0.355, 1)',
+    nextArrow: `<button type="button" class="slick-next">
+  									<svg fill="black">
+											<use xlink:href="#chevron" />
+										</svg>
+									</button>`,
+    prevArrow: `<button type="button" class="slick-prev">
+  									<svg fill="black">
+											<use xlink:href="#chevron" />
+										</svg>
+									</button>`
+  });
 
   function doAnimations(elements) {
     var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -81,23 +101,24 @@ $(document).ready(function() {
     loop: true,
     optimizeDisplay: false,
     /*anchor:'bottom, center',*/
-    startAt:0,
+    startAt: 0,
     realfullscreen: true,
     showControls: false,
-    onError: function () {
-    	console.log(this);
+    rows: 0,
+    onError: function() {
+      console.log(this);
     }
   });
 
-  $('.search').on('click',function (event) {
-  	event.preventDefault();
-  	$('.search-block').addClass('show');
-  	$('.search-block').find('input').focus();
+  $('.search').on('click', function(event) {
+    event.preventDefault();
+    $('.search-block').addClass('show');
+    $('.search-block').find('input').focus();
   });
 
-  $('.cancel').on('click',function () {
-  	$('.search-block').removeClass('show');
-  	$('.search-block').find('input').val('')
+  $('.cancel').on('click', function() {
+    $('.search-block').removeClass('show');
+    $('.search-block').find('input').val('')
   })
 
 });
